@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -28,10 +27,10 @@ public class SwipeRefreshActivity extends Activity {
         setContentView(R.layout.swipe_refresh_activity);
         mContext = this;
         SwipeRefreshRecyclerView recycler = (SwipeRefreshRecyclerView) findViewById(R.id.recycler);
-        LinearLayoutManager manager = new LinearLayoutManager(this);
-        manager.setOrientation(LinearLayoutManager.VERTICAL);
-        recycler.setLayoutManager(manager);
         recycler.setAdapter(new MyViewHolder());
+//        ItemTouchHelperCallback mCallback = new ItemTouchHelperCallback();
+//        ItemTouchHelperExtension mItemTouchHelper = new ItemTouchHelperExtension(mCallback);
+//        mItemTouchHelper.attachToRecyclerView(mRecyclerView);
     }
 
     private class MyViewHolder extends RecyclerView.Adapter<MyViewHolder.ViewHolder> {
