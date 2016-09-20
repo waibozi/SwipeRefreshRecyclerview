@@ -45,7 +45,7 @@ public class LoadingMoreFooter extends LinearLayout {
 
         AVLoadingIndicatorView progressView = new  AVLoadingIndicatorView(this.getContext());
         progressView.setIndicatorColor(0xffB5B5B5);
-        progressView.setIndicatorId(ProgressStyle.BallSpinFadeLoader);
+        progressView.setIndicatorId(ProgressStyle.Pacman);
         progressCon.setView(progressView);
 
         addView(progressCon);
