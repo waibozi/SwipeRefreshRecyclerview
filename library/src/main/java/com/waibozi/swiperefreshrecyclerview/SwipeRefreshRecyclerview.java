@@ -81,7 +81,7 @@ public class SwipeRefreshRecyclerView extends RecyclerView {
         return  mHeaderViews.size() > 0 &&  sHeaderTypes.contains(itemViewType);
     }
 
-    //判断是否是XRecyclerView保留的itemViewType
+    //判断是否是保留的itemViewType
     private boolean isReservedItemViewType(int itemViewType) {
         if(itemViewType == TYPE_REFRESH_HEADER || itemViewType == TYPE_FOOTER || sHeaderTypes.contains(itemViewType)) {
             return true;
@@ -130,6 +130,10 @@ public class SwipeRefreshRecyclerView extends RecyclerView {
 
     public void setPullRefreshEnabled(boolean enabled) {
         pullRefreshEnabled = enabled;
+    }
+
+    public boolean getPullRefreshEnabled() {
+        return pullRefreshEnabled;
     }
 
     public void setLoadingMoreEnabled(boolean enabled) {
